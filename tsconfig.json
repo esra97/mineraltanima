@@ -1,17 +1,21 @@
 {
   "extends": "expo/tsconfig.base",
   "compilerOptions": {
-    "strict": true,
+    "strict": true, 
+    "esModuleInterop": true, 
+    "moduleResolution": "node", 
+    "allowSyntheticDefaultImports": true, 
+    "baseUrl": ".", 
     "paths": {
-      "@/*": [
-        "./*"
-      ]
-    }
+      "@/*": ["./*"]
+    },
+    "skipLibCheck": true,  // Kütüphaneler için tip kontrolünü hızlandırır
+    "noEmit": true  // TypeScript'in sadece tür denetimi yapmasını sağlar, çıktı oluşturmaz
   },
   "include": [
-    "**/*.ts",
-    "**/*.tsx",
-    ".expo/types/**/*.ts",
+    "**/*.ts", 
+    "**/*.tsx", 
+    ".expo/types/**/*.ts", 
     "expo-env.d.ts"
   ]
 }
